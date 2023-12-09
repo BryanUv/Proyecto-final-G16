@@ -8,7 +8,7 @@ import Gallery from "./pages/Gallery";
 const App = () => {
   return (
     <BrowserRouter>
-      <header className="bg-slate-300 py-4 px-6">
+      <header className="bg-orange-400 py-4 px-6">
         <div className="container mx-auto flex justify-between items-center">
           <div>
             <img src="https://placehold.co/150x80" />
