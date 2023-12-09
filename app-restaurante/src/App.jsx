@@ -1,12 +1,12 @@
-import { BrowserRouter, Routes, Route, Link  } from 'react-router-dom'
-import Home from './pages/Home'
-import Login from './pages/Login'
-import Register from './pages/Register'
-import Gallery from './pages/Gallery'
+import React from "react";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Gallery from "./pages/Gallery";
 
 const App = () => {
   return (
-    <>
     <BrowserRouter>
       <header className="bg-slate-300 py-4 px-6">
         <div className="container mx-auto flex justify-between items-center">
@@ -14,11 +14,11 @@ const App = () => {
             <img src="https://placehold.co/150x80" />
           </div>
 
-          <nav className="flex justify-center gap-5">
-            <Link to="/" className='hover:bg-'>Home</Link>
+          <nav className="flex gap-4">
+            <Link to="/">Home</Link>
             <Link to="/gallery">Galeria</Link>
           </nav>
-          <div className="flex gap-7">
+          <div className="flex gap-4">
             <Link to="/login">Login</Link>
             <Link to="/register">Register</Link>
           </div>
@@ -33,8 +33,7 @@ const App = () => {
         </Routes>
       </main>
     </BrowserRouter>
-    </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
