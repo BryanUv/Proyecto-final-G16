@@ -1,9 +1,7 @@
-
-
 const Gallery = () => {
   return (
-    <div>Gallery</div>
+    <h1 className="text-center">Gallery</h1>
   )
 }
 
-export default Gallery
+export default Gallery

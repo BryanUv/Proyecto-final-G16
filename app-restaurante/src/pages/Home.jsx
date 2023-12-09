@@ -1,7 +1,10 @@
 
 const Home = () => {
   return (
-    <h1 className="text-sm">Home</h1>
+
+
+    <h1 className="text-center">Home</h1>
+
   )
 }
 
