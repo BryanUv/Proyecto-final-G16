@@ -1,32 +1,40 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route,  NavLink } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import Register from './pages/Register'
+import Gallery from './pages/Gallery'
 
 const App = () => {
   return (
-    <>
-      <header className='bg-slate-300 '>
-        <div className='container-lg '>
-          <div>
-            <img src="https://placehold.co/40x40"/>
-          </div>
-          <nav>
-            <NavLink to='/'>Home</NavLink>
-          </nav>
+  
+    <BrowserRouter>
+    <header className="bg-slate-300 py-4 px-6">
+      <div className="container-lg flex justify-around items-center">
+        <div>
+          <img src="https://placehold.co/150x80" />
         </div>
-      </header>
-      <main>
-        <BrowserRouter>
-          <Routes>
-            <Route path='/' element={<Home/>}/>
-            <Route path='/login' element={<Login/>}/>
-            <Route path='/register' element={<Register/>}/>
-          </Routes>
-        </BrowserRouter>
-      </main>
-    </>
+
+        <nav className="flex justify-center gap-5">
+          <Link to="/">Home</Link>
+          <Link to="/gallery">Galeria</Link>
+        </nav>
+        <div className="flex gap-7">
+          <Link to="/login">Login</Link>
+          <Link to="/register">Register</Link>
+        </div>
+      </div>
+    </header>
+    <main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
+    </main>
+  </BrowserRouter>
+    
   )
 }
 
