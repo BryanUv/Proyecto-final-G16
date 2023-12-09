@@ -15,7 +15,7 @@ const App = () => {
           </div>
 
           <nav className="flex gap-4">
-            <Link to="/">Home</Link>
+            <Link to="/" className="font-bold text-white hover:text-amber-700">Home</Link>
             <Link to="/gallery">Galeria</Link>
           </nav>
           <div className="flex gap-4">
