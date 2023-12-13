@@ -24,9 +24,9 @@ const App = () => {
           </div>
         </div>
       </header>
-      <main className="bg-slate-800">
+      <main>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route  path="/" element={<Home />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
