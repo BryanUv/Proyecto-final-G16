@@ -2,6 +2,7 @@ import{Link} from "react-router-dom"
 
 const Home = () => {
   return (
+
 <>
 <section className="bg-[#27374D] flex gap-5 items-center justify-center p-5 flex-col " >
   <div className="text-white font-mono text-8xl flex text-center absolute shadow-2xl animate-pulse uppercase">
@@ -107,6 +108,7 @@ const Home = () => {
 </>
 
     
+
 
   )
 }
