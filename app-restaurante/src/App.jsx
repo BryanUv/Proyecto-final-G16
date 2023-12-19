@@ -10,13 +10,13 @@ import Reserva from "./pages/Reserva";
 const App = () => {
   return (
     <BrowserRouter>
-      <header className="bg-slate-300 py-4 px-6">
+      <header className="bg-slate-900 py-4 px-6 text-white">
         <div className="container mx-auto flex justify-between items-center">
           <div>
             <img src="https://placehold.co/150x80" />
           </div>
 
-          <nav className="flex gap-4">
+          <nav className="flex gap-4 " >
             <Link to="/">Home</Link>
             <Link to="/gallery">Galeria</Link>
           </nav>
