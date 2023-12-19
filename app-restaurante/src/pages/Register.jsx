@@ -1,8 +1,11 @@
-
-
+import FormRegister from "../components/Registro/formRegister"
 const Register = () => {
   return (
-    <h1 className="text-center">Register</h1>
+
+    <div className="bg-slate-900 w-full h-screen">
+        <FormRegister/>
+    </div>
+
   )
 }
 

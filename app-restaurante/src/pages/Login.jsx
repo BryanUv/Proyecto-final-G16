@@ -1,3 +1,4 @@
+
 import FormImage from "../components/Login/FormImage";
 import FormLogin from "../components/Login/FormLogin";
 
@@ -13,5 +14,6 @@ const Login = () => {
     </div>
   );
 };
+
 
 export default Login;
