@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Gallery from "./pages/Gallery";
+import Reservas from "./pages/Reservas";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
           <div className="flex gap-4">
             <Link to="/login">Login</Link>
             <Link to="/register">Register</Link>
+            <Link to="/reservas">Reservar</Link>
           </div>
         </div>
       </header>
@@ -30,6 +32,7 @@ const App = () => {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/reservas" element={<Reservas />} />
         </Routes>
       </main>
     </BrowserRouter>
