@@ -70,7 +70,7 @@ const Home = () => {
   <p className="text-center">
   ¡Reserva tu mesa y prepárate para una experiencia culinaria inolvidable!
   </p>
-  <Link to="/reserva">
+  <Link to="/reservas">
     <div className="px-9 py-2 bg-white/10 border-2 rounded-lg hover:bg-slate-900 animate-bounce">
       HAS TU RESERVA
     </div>
