@@ -16,8 +16,10 @@ const App = () => {
             <img src="https://placehold.co/150x80" />
           </div>
 
-          <nav className="flex gap-4 " >
-            <Link to="/">Home</Link>
+
+          <nav className="flex gap-4">
+            <Link to="/" className="font-bold text-white hover:text-amber-700">Home</Link>
+
             <Link to="/gallery">Galeria</Link>
           </nav>
           <div className="flex gap-4">
