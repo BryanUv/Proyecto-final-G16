@@ -1,9 +1,8 @@
+import Header from "../components/Login/Header"
 
 
 const Login = () => {
   return (
-
-    <h1 className="text-center">Login</h1>
 
   )
 }
