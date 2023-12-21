@@ -13,19 +13,25 @@ const App = () => {
       <header className="bg-slate-900 py-4 px-6 text-white">
         <div className="container mx-auto flex justify-between items-center">
           <div>
-            <img src="https://placehold.co/150x80" />
+            <img
+              className=" w-32 rounded-full"
+              src="https://marketplace.canva.com/EAFVq1ge0ZU/1/0/1600w/canva-logo-restaurante-circular-sencillo-negro-blanco-QEgdJHSl6GE.jpg"
+            />
           </div>
 
-
           <nav className="flex gap-4">
-            <Link to="/" className="font-bold text-white hover:text-amber-700">Home</Link>
+            <Link to="/" className="font-bold text-white hover:font-extrabold text-3xl">Home</Link>
 
-            <Link to="/gallery">Galeria</Link>
+            {/* <Link to="/gallery">Galeria</Link> */}
           </nav>
           <div className="flex gap-4">
-            <Link to="/login">Login</Link>
-            <Link to="/register">Register</Link>
-            <Link to="/reservas">Reservar</Link>
+            <Link to="/login">
+              <div className=" bg-slate-400 py-4 px-14 text-lg font-bold rounded-3xl hover:animate-pulse hover:bg-slate-600 ">Login</div>
+            </Link>
+            <Link to="/register">
+            <div className=" bg-slate-400 py-4 px-14 text-lg font-bold rounded-3xl hover:animate-pulse hover:bg-slate-600 ">Register</div>
+            </Link>
+            {/* <Link to="/reservas">Reservar</Link> */}
           </div>
         </div>
       </header>

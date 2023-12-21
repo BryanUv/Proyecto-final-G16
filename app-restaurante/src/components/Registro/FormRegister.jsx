@@ -1,9 +1,19 @@
 import React from "react";
+import { HiArrowSmLeft } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 const FormRegister = () => {
   return (
     <section className="flex w-full h-screen">
-      <div className="flex w-full h-full justify-center items-center">
+      <div className="flex  w-full h-full justify-center items-center">
+        <div className="absolute left-12 top-60">
+          <Link to='/'>
+            <div className="flex items-center">
+              <HiArrowSmLeft color="white" size={50} />
+              <p className="text-white text-3xl">Ir Home</p>
+            </div>
+          </Link>
+        </div>
         <div className="flex flex-col items-center w-96 bg-white border border-transparent rounded-lg">
           <img
             className=" w-32"
