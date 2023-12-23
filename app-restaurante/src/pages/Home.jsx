@@ -5,7 +5,7 @@ const Home = () => {
 
 <>
 <section className="bg-[#27374D] flex gap-5 items-center justify-center p-5 flex-col " >
-  <div className="text-white font-mono text-8xl flex text-center absolute shadow-2xl animate-pulse uppercase">
+  <div className="text-white font-mono lg:text-8xl flex text-center absolute shadow-2xl animate-pulse uppercase">
     Grill Haus Restaurant
   </div>
   <div className="">
@@ -66,12 +66,12 @@ const Home = () => {
   </div>
     
 </section>
-<section className="bg-white/10 flex  flex-col gap-8 items-center justify-center p-12 text-white text-4xl w-[40%] h-[25%] absolute  translate-x-[75%] translate-y-[-200%]  backdrop-blur-sm  shadow-2xl ">
+<section className=" bg-white/10 flex  flex-col gap-8 items-center justify-center p-12 text-white text-4xl w-[40%] h-[25%] absolute  translate-x-[75%] translate-y-[-200%]  backdrop-blur-sm  shadow-2xl ">
   <p className="text-center">
   ¡Reserva tu mesa y prepárate para una experiencia culinaria inolvidable!
   </p>
   <Link to="/reservas">
-    <div className="px-9 py-2 bg-white/10 border-2 rounded-lg hover:bg-slate-900 animate-bounce">
+    <div className="w-14 h-32 px-9 py-2 bg-white/10 border-2 rounded-lg hover:bg-slate-900 animate-bounce">
       HAS TU RESERVA
     </div>
 

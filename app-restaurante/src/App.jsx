@@ -11,7 +11,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <header className="bg-slate-900 py-4 px-6 text-white">
-        <div className="container mx-auto flex justify-between items-center">
+        <div className="container mx-auto lg:flex justify-between items-center">
           <div>
             <img
               className=" w-32 rounded-full"

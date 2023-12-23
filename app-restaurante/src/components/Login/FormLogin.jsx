@@ -18,7 +18,7 @@ const FormLogin = () => {
           src="https://marketplace.canva.com/EAFVq1ge0ZU/1/0/1600w/canva-logo-restaurante-circular-sencillo-negro-blanco-QEgdJHSl6GE.jpg"
         />
         <h1 className="text-5xl font-semibold">¡Bienvenido!</h1>
-        <p className="font-medium text-lg text-gray-500 mt-4">
+        <p className="font-medium text-lg text-center text-gray-500 mt-4">
           ¡Bienvenido de nuevo! Por favor ingrese sus datos.
         </p>
         <form>
