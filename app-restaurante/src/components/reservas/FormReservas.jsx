@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
 import { HiArrowSmLeft } from "react-icons/hi";
 import { Link } from "react-router-dom";
-// bg-[url('/img/chef1.jpg')
-const FormReservas = () =>{
+
+const FormReservas = ({onSaveReserva}) =>{
     const INITAL_FORM_STATE = {
       id: '',
       cliName:'',
@@ -42,21 +42,21 @@ const FormReservas = () =>{
         setForm(INITAL_FORM_STATE)
       }
       return (
-        <section className="w-full h-screen bg-[url('/img/chef1.jpg')] bg-no-repeat bg-cover">
-          <div className="absolute top-80 left-52">
+        <section className="p-10">
+          {/* <div className="absolute top-100 left-52">
             <Link to="/">
               <div className="flex items-center gap-3 py-3">
                 <HiArrowSmLeft color="white" size={50} />
                 <p className="text-white text-3xl">Ir Home</p>
               </div>
             </Link>
-          </div>
-          <div className=" w-96 p-4 border border-transparent rounded-lg bg-white/20 backdrop-blur-sm absolute bottom-[15%] left-[10%]">
+          </div> */}
+          <div className=" w-96 p-4 border border-transparent rounded-lg bg-white/20 backdrop-blur-sm absolute bottom-[10%] left-[10%]">
             <h2 className="text-2xl text-center mb-4 text-white font-bold">Reservas</h2>
     
-            <pre>
+            {/* <pre>
               {JSON.stringify(form, null, 2)}
-            </pre>
+            </pre> */}
     
             <form className="flex flex-col gap-4" onSubmit={handleSaveReserva}>
               <input
