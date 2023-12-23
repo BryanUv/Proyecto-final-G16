@@ -1,78 +1,93 @@
-import React from "react";
-import { HiArrowSmLeft } from "react-icons/hi";
 import { Link } from "react-router-dom";
+import { HiArrowSmLeft } from "react-icons/hi";
 
 const FormRegister = () => {
   return (
-    <section className="flex w-full h-screen">
-      <div className="flex  w-full h-full justify-center items-center">
-        <div className="absolute left-12 top-60">
-          <Link to='/'>
-            <div className="flex items-center">
-              <HiArrowSmLeft color="white" size={50} />
-              <p className="text-white text-3xl">Ir Home</p>
-            </div>
-          </Link>
-        </div>
-        <div className="flex flex-col items-center w-96 bg-white border border-transparent rounded-lg">
-          <img
-            className=" w-32"
-            src="https://marketplace.canva.com/EAFVq1ge0ZU/1/0/1600w/canva-logo-restaurante-circular-sencillo-negro-blanco-QEgdJHSl6GE.jpg"
-          />
-          <h2 className="text-2xl font-bold text-center mb-6 text-black">
-            Regístrate
-          </h2>
-
-          <form className="flex flex-col gap-4">
-            <div className="flex gap-4 flex-col ">
+    <section>
+      <div className="justify-start">
+        <Link to="/">
+          <div className="flex items-center gap-3 py-3">
+            <HiArrowSmLeft color="white" size={50} />
+            <p className="text-white text-3xl">Ir Home</p>
+          </div>
+        </Link>
+      </div>
+      <div className="bg-white px-10 py-[2.1rem] rounded-3xl border-2 border-gray-100 flex flex-col items-center gap-y-2">
+        <img
+          className=" w-32"
+          src="https://marketplace.canva.com/EAFVq1ge0ZU/1/0/1600w/canva-logo-restaurante-circular-sencillo-negro-blanco-QEgdJHSl6GE.jpg"
+        />
+        <h1 className="text-5xl font-semibold">Registrate</h1>
+        <p className="font-medium text-lg text-center text-gray-500 mt-4">
+          ¡Bienvenido de nuevo! Por favor ingrese sus datos.
+        </p>
+        <form>
+          <div className="mt-8">
+            <div>
+              <label htmlFor="email" className="text-lg font-medium">
+                Nombres
+              </label>
               <input
                 type="text"
-                name="cliName"
-                placeholder="Nombres"
-                className="border p-4 mt-1 shadow-md rounded-md"
-                // onChange={handleChange}
-                // value={form.petName}
-              />
-              <input
-                type="text"
-                name="cliLastName"
-                placeholder="Apellidos"
-                className="border p-4 mt-1 shadow-md rounded-md"
-                // onChange={handleChange}
-                // value={form.petName}
+                id="nombre"
+                className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent"
+                placeholder="Ingresa tu nombre"
+                required
               />
             </div>
-
-            <input
-              type="email"
-              name="cliEmail"
-              placeholder="Email"
-              className="border p-4 mt-1 shadow-md rounded-md "
-              // onChange={handleChange}
-              // value={form.petAge}
-            />
-            <input
-              type="password"
-              name="cliPassword"
-              placeholder="Constraseña"
-              className="border p-4 mt-1 shadow-md rounded-md"
-            />
-            <input
-              type="submit"
-              className="border p-2 mb-4 bg-slate-400 text-black rounded-md cursor-pointer hover:bg-slate-900 hover:text-white"
-              value="Registrarme"
-            />
-          </form>
-        </div>
+            <div>
+              <label htmlFor="apellido" className="text-lg font-medium">
+                Apellidos
+              </label>
+              <input
+                type="texto"
+                id="apellido"
+                className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent"
+                placeholder="Ingresa tu apellido"
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="email" className="text-lg font-medium">
+                Email
+              </label>
+              <input
+                type="texto"
+                id="email"
+                className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent"
+                placeholder="Ingresa tu email"
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="password" className="text-lg font-medium">
+                Contraseña
+              </label>
+              <input
+                type="password"
+                id="contraseña"
+                className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent"
+                placeholder="Ingresa tu contraseña"
+                required
+              />
+            </div>
+            <div className="mt-8 flex flex-col gap-y-4">
+              <button className="hover:bg-slate-700 py-3 rounded-xl bg-slate-500 text-white text-lg font-bold">
+                Registrate
+              </button>
+            </div>
+            <div className="mt-8 flex justify-center items-center">
+              <p className="font-medium text-base">Ya tiene una cuenta?</p>
+              <Link
+                to="/login"
+                className="text-slate-500 text-base font-medium ml-2"
+              >
+                Login
+              </Link>
+            </div>
+          </div>
+        </form>
       </div>
-
-      <div className="hidden relative h-full w-full lg:flex items-center justify-center">
-        <div className="w-full h-full">
-          <img className="w-full h-full" src="/img/registrar.jpg" alt="" />
-        </div>
-        <div className="w-full h-1/2 absolute bottom-0 bg-white/10 backdrop-blur-0" />
-      </div>
-
     </section>
   );
 };
