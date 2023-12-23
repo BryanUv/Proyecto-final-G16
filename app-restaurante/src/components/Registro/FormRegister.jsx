@@ -1,8 +1,9 @@
-import React from "react";
+
 import { HiArrowSmLeft } from "react-icons/hi";
 import { Link } from "react-router-dom";
 
 const FormRegister = () => {
+
   return (
     <section className="flex w-full h-screen">
       <div className="flex  w-full h-full justify-center items-center">
