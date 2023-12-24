@@ -13,11 +13,25 @@ const Reservas = () => {
     console.log(form)
     setReserva([...reserva, form])
   }
-  return(
+  
+  const handleEliminar = (id) =>{
+    console.log('id', id)
+
+    const newReservas = reserva.filter(
+      reserva => reserva.id !== id
+    )
+
+  setReserva(newReservas)
+  }
+  
+
+  const handleEditar = (reserva) =>{
+    console.log(reserva)
+  }
+
+  return(   
 
     
-
-
     //preguntar a profesor sobre generar reservas con respecto al fondo 
     <section className="flex justify-around w-full h-screen bg-[url('/img/chef1.jpg')] bg-no-repeat bg-cover">
       <div className="justify-start">
@@ -28,17 +42,20 @@ const Reservas = () => {
           </div>
         </Link>
       </div>
-
+    
       < FormReservas 
         onSaveReserva= {handleSaveReserva}
         />
-      <ListaReserva reserva= {reserva}/>
+      <ListaReserva reserva= {reserva} 
+      eliminar={handleEliminar}
+      editar={handleEditar}
+      />
+    
     </section>
       
-    
+  
   )
 }
-
   
 
 export default Reservas;
