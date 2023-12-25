@@ -7,7 +7,7 @@ import { HiArrowSmLeft } from "react-icons/hi";
 const Reservas = () => {
 
   const [reserva, setReserva] = useState([])
-
+  const [reservaSelected, setReservaSelected] = useState({})
   const handleSaveReserva = (form) =>{
 
     console.log(form)
@@ -27,6 +27,9 @@ const Reservas = () => {
 
   const handleEditar = (reserva) =>{
     console.log(reserva)
+    setReservaSelected(reserva)
+
+    
   }
 
   return(   
@@ -45,6 +48,7 @@ const Reservas = () => {
     
       < FormReservas 
         onSaveReserva= {handleSaveReserva}
+        reserva = {reservaSelected}
         />
       <ListaReserva reserva= {reserva} 
       eliminar={handleEliminar}
