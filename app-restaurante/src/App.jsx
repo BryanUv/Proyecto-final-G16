@@ -6,6 +6,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Gallery from "./pages/Gallery";
 import Reservas from "./pages/Reservas";
+import Platos from "./components/Carta/Platos";
 
 const App = () => {
   return (
@@ -31,13 +32,17 @@ const App = () => {
             <Link to="/register">
             <div className=" bg-slate-400 py-4 px-14 text-lg font-bold rounded-3xl hover:animate-pulse hover:bg-slate-600 ">Register</div>
             </Link>
-            {/* <Link to="/reservas">Reservar</Link> */}
+            <Link to="/gallery">Consulta Nuestros platos</Link> 
           </div>
         </div>
       </header>
       <main>
         <Routes>
           <Route  path="/" element={<Home />} />
+
+          <Route  path="/platos/:idMeal" element={<Platos />} />
+
+
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />

@@ -20,16 +20,6 @@ const FormReservas = ({onSaveReserva, reserva}) =>{
         }
       },[reserva])
 
-      // useEffect(() =>{
-      //   const editReserva ={
-      //     ...form
-      //   }
-      //   const saveDataEditar = reserva.id === reserva.id
-      //   if(saveDataEditar){
-      //     onSaveReserva(editReserva)
-      //   }
-      // })
-
       const handleChange = (event) => {
         const name = event.target.name
         const value = event.target.value
@@ -42,23 +32,11 @@ const FormReservas = ({onSaveReserva, reserva}) =>{
   
         const newReserva = {
           ...form,
-          id: crypto.randomUUID()
-        }
-        
-        
-
+          id: crypto.randomUUID()        
+        }  
           console.log('Guardando reserva...', newReserva)
-          onSaveReserva(newReserva)
+          onSaveReserva(newReserva)          
         
-        if(reserva.id === reserva.id){
-            setForm(reserva)
-          }
-            
-          
-
-
-  
-        setForm(INITAL_FORM_STATE)
       }
       return (
         <section className="p-10">
@@ -109,6 +87,7 @@ const FormReservas = ({onSaveReserva, reserva}) =>{
                 type="submit"
                 className="border p-2 bg-slate-400 text-white rounded-md cursor-pointer border-transparent hover:bg-slate-900"
                 value="Guardar"
+                
               />
             </form>
           </div>

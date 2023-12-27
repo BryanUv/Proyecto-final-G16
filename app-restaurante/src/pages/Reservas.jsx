@@ -28,8 +28,6 @@ const Reservas = () => {
   const handleEditar = (reserva) =>{
     console.log(reserva)
     setReservaSelected(reserva)
-
-    
   }
 
   return(   
