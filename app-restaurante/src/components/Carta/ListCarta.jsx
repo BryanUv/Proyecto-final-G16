@@ -21,8 +21,9 @@ const ListCarta = () => {
   return (
     <>
       <section className="grid lg:grid-cols-5 grid-cols-1 gap-6 gap-y-20 mt-20 mx-20">
-        {JSON.stringify(platos, null, 2)}
+        
         {platos.map(plato => {
+          // key= {plato.idMeal}
           return (
             <Link to={`/Platos/${plato.idMeal}`} key= {plato.idMeal}>
               <article key={plato.idMeal} className="bg-white/10 backdrop-blur-sm rounded-xl p-3 hover:scale-110 hover:text-white transition duration-500">
