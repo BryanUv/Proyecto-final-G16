@@ -4,7 +4,6 @@ import { Link, useParams } from 'react-router-dom';
 const Platos = () => {
   const { id } = useParams();
   const [platos, setPlatos] = useState(null);
-  const [loading, setLoading] = useState(true);
 
   const getPlatos = async (id) => {
     
@@ -30,14 +29,15 @@ const Platos = () => {
 
         
           <div className='flex justify-center flex-col items-center mt-6 text-center gap-4 '>
-            <img src={platos?.strMealThumb } alt={platos?.strMeal} />
+            <img className='rounded-xl shadow-black shadow-lg' src={platos?.strMealThumb } alt={platos?.strMeal} />
 
-            
-            <strong className='text-4xl'>Categoría: {platos?.strCategory}</strong>
-            <strong className='text-4xl'>País de origen: {platos?.strArea}</strong>
+            <div className='bg-white flex flex-col py-4 px-8 rounded-lg gap-2 mt-5 shadow-black shadow-md'>
+              <strong className='text-4xl'>Categoría: {platos?.strCategory}</strong>
+              <strong className='text-4xl'>País de origen: {platos?.strArea}</strong>
+            </div>
             
 
-            <Link to="/Gallery" className='font-bold text-lg mb-10 text-white hover:text-blue-700 hover:text-3xl'>
+            <Link to="/Gallery" className='font-bold text-lg mb-10 text-white hover:text-slate-400 hover:text-3xl mt-5'>
               Volver a la Carta
             </Link>
           </div>
