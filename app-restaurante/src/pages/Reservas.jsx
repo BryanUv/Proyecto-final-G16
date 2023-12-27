@@ -9,9 +9,22 @@ const Reservas = () => {
   const [reserva, setReserva] = useState([])
   const [reservaSelected, setReservaSelected] = useState({})
   const handleSaveReserva = (form) =>{
+    const id = form.id
 
+    const reservaIndexFound = reserva.findIndex(res => res.id === id)
+
+    if(reservaIndexFound >= 0){
+
+     const cloneReserva = [...reserva]
+     cloneReserva[reservaIndexFound] = form
+     setReserva(cloneReserva)
+    }else{
+     if(reserva.length === 0){
+       
+       setReserva([form])
+     }
+    }
     console.log(form)
-    setReserva([...reserva, form])
   }
   
   const handleEliminar = (id) =>{

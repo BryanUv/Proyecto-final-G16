@@ -15,6 +15,7 @@ const FormReservas = ({onSaveReserva, reserva}) =>{
   
       useEffect(() => {
         const hayReserva = Object.keys(reserva).length > 0
+        console.log(reserva)
         if(hayReserva){
           setForm(reserva)
         }
@@ -29,14 +30,20 @@ const FormReservas = ({onSaveReserva, reserva}) =>{
   
       const handleSaveReserva = (event) => {
         event.preventDefault();
-  
-        const newReserva = {
-          ...form,
-          id: crypto.randomUUID()        
-        }  
+        if(!form.id){
+          //aqui se genera una nueva reserva
+          const newReserva = {
+            ...form,
+            id: crypto.randomUUID()        
+          }  
           console.log('Guardando reserva...', newReserva)
           onSaveReserva(newReserva)          
-        
+        }else{
+          //cuando se edita la reserva
+          onSaveReserva(form)
+          
+        }
+        setForm(INITAL_FORM_STATE)
       }
       return (
         <section className="p-10">
