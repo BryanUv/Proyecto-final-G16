@@ -4,17 +4,16 @@ const Home = () => {
   return (
 
 <>
-<section className="bg-[#27374D] flex gap-5 items-center justify-center p-5 flex-col " >
-  <div className="text-white font-mono text-8xl flex text-center absolute shadow-2xl animate-pulse uppercase">
+<section className="bg-[#27374D] flex gap-5 items-center justify-center p-5 flex-col" >
+  <div className=" text-white font-mono text-8xl flex text-center absolute shadow-2xl animate-pulse uppercase ">
     Grill Haus Restaurant
   </div>
   <div className="">
-    <img src="https://media.istockphoto.com/id/1364372205/es/foto/chef-entregando-plato-con-comida-a-trav%C3%A9s-de-la-estaci%C3%B3n-de-pedidos-en-la-cocina-comercial.jpg?s=2048x2048&w=is&k=20&c=y7FODfJbZkZamixBxJxNxhclJoVUiFMTCK8OnG62rtw=" width="1440" alt="" />
+    <img className="" src="https://media.istockphoto.com/id/1364372205/es/foto/chef-entregando-plato-con-comida-a-trav%C3%A9s-de-la-estaci%C3%B3n-de-pedidos-en-la-cocina-comercial.jpg?s=2048x2048&w=is&k=20&c=y7FODfJbZkZamixBxJxNxhclJoVUiFMTCK8OnG62rtw=" width="1440" alt="" />
   </div>
   
 </section>
-<section className="bg-[#27374D] flex gap-10 items-center justify-center p-12"> 
- 
+<section className="bg-[#27374D] flex gap-10 items-center justify-center p-12">  
   <div className=" text-center font-mono text-2xl text-white " > 
         <p>
         Nuestro Compromiso
@@ -28,7 +27,7 @@ const Home = () => {
   </div>
 </section>
 <section className="bg-[#27374D] flex gap-10 items-center justify-center p-10 "> 
-<div>
+<div > 
   <img src="https://t3.ftcdn.net/jpg/04/38/64/76/360_F_438647662_2tWr9OdsFNQi3KJVRM9HsyWkyuwHdZdV.jpg" width="700" alt="" />
 </div>
 <div>
