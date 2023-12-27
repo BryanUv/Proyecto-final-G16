@@ -4,7 +4,7 @@ const Home = () => {
   return (
 
 <>
-<section className="bg-[#27374D] flex gap-5 items-center justify-center p-5 flex-col " >
+<section className="bg-[#27374D] flex gap-5 items-center justify-center p-5 flex-col z-20" >
   <div className="text-white font-mono lg:text-8xl flex text-center absolute shadow-2xl animate-pulse uppercase">
     Grill Haus Restaurant
   </div>
@@ -36,7 +36,7 @@ const Home = () => {
 </div>
 </section>
 <section className="bg-[#27374D] flex gap-10 items-center justify-center p-10 " >
-  <div className="text-center font-mono text-2xl text-white ">
+  <div className="text-center font-mono text-2xl text-white">
     <p>    
       Explora la elegancia de [Nombre del Restaurante], donde el diseño y la delicia se fusionan. 
     </p>
@@ -53,7 +53,7 @@ const Home = () => {
 </section>
 <section className="bg-[#27374D] flex gap-10 items-center justify-center p-10 ">
   
-  <div className="flex flex-col gap-14 item">
+  <div className="flex flex-col gap-4 lg:gap-14 item">
   <div className="">
     <img src="https://i.pinimg.com/736x/18/32/a0/1832a0539474e080a4405140b1a04efb.jpg" width='725' alt="" />
   </div>
@@ -66,12 +66,13 @@ const Home = () => {
   </div>
     
 </section>
-<section className=" bg-white/10 flex  flex-col gap-8 items-center justify-center p-12 text-white text-4xl w-[40%] h-[25%] absolute  translate-x-[75%] translate-y-[-200%]  backdrop-blur-sm  shadow-2xl ">
+<section className=" bg-white/10 flex  flex-col gap-y-3 lg:gap-8 items-center justify-center pt-1 px-5 lg:px-0 lg:pt-0 lg:p-12 text-white text-base 
+  lg:text-4xl w-[60%] lg:w-[40%] h-[15%] lg:h-[25%] absolute translate-x-[30%]  lg:translate-x-[75%] translate-y-[-180%] lg:translate-y-[-200%] backdrop-blur-sm  shadow-2xl">
   <p className="text-center">
   ¡Reserva tu mesa y prepárate para una experiencia culinaria inolvidable!
   </p>
   <Link to="/reservas">
-    <div className="w-14 h-32 px-9 py-2 bg-white/10 border-2 rounded-lg hover:bg-slate-900 animate-bounce">
+    <div className="px-9 py-2 bg-white/10 border-2 rounded-lg hover:bg-slate-900 animate-bounce">
       HAS TU RESERVA
     </div>
 
@@ -81,24 +82,24 @@ const Home = () => {
     HAZ TU RESERVA 
   </button>*/}
 </section>
-<footer className="bg-slate-900 flex justify-center items-center gap-14 p-9">
-  <div className=" bg-slate-900 h-80 w-80 flex justify-center items-center flex-col text-white gap-2">
+<footer className="bg-slate-900 flex flex-col lg:flex-row justify-center items-center  p-9">
+  <div className=" bg-slate-900 h-40 lg:h-80 w-80 flex justify-center items-center flex-col text-white gap-2">
         <p>Phone: +1-543-123-4567</p>
         <p>example@fylo.com</p>
   </div>
-  <div className=" bg-slate-900 h-80 w-80 flex justify-center items-center flex-col text-white gap-2">
+  <div className=" bg-slate-900 h-40 lg:h-80 w-80 flex justify-center items-center flex-col text-white gap-2">
         <p>Contact Us</p>
         <p>Terms</p>
         <p>Privacy</p>
       
   </div>
-  <div className=" bg-slate-900 h-80 w-80 flex justify-center items-center flex-col text-white g-2">
+  <div className=" bg-slate-900 h-40 lg:h-80 w-80 flex justify-center items-center flex-col text-white g-2">
         <p>About Us</p>
         <p>Jobs</p>
         <p>Press</p>
         <p>Blog</p>
   </div>
-  <div className=" bg-slate-900 h-80 w-80 flex justify-center items-center gap-5 text-white">
+  <div className=" bg-slate-900 h-40 lg:h-80 w-80 flex justify-center items-center gap-5 text-white">
     <img className="h-12" src="https://www.svgrepo.com/show/475647/facebook-color.svg" alt="" />
     <img className="h-12" src="https://www.svgrepo.com/show/475689/twitter-color.svg" alt="" />
     <img className="h-12" src="https://www.svgrepo.com/show/475658/instagram-color.svg" alt="" />
