@@ -1,4 +1,4 @@
-import ListCarta from "../components/Carta/listCarta"
+import ListCarta from "../components/Carta/ListCarta"
 const Gallery = () => {
   return (
     <section className="bg-[#27374D]">

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import FormReservas from "../components/reservas/FormReservas";
-import ListaReserva from "../components/reservas/listaReserva";
+import ListaReserva from "../components/reservas/ListaReserva";
 import { Link } from "react-router-dom";
 import { HiArrowSmLeft } from "react-icons/hi";
 
