@@ -48,7 +48,7 @@ const FormReservas = ({onSaveReserva, reserva}) =>{
       return (
         <section className="p-10">
          
-          <div className=" w-96 p-4 border border-transparent rounded-lg bg-white/20 backdrop-blur-sm absolute bottom-[10%] left-[10%]">
+          <div className=" w-96 p-4 border border-transparent rounded-lg bg-white/20 backdrop-blur-sm lg:absolute lg:bottom-[10%] lg:left-[10%]">
             <h2 className="text-2xl text-center mb-4 text-white font-bold">Reservas</h2>
     
             {/* <pre>
@@ -63,6 +63,7 @@ const FormReservas = ({onSaveReserva, reserva}) =>{
                 className="border p-3 shadow-md rounded-md"
                 onChange={handleChange}
                 value={form.cliName}
+                required
               />
               <input
                 type="number"
@@ -73,6 +74,7 @@ const FormReservas = ({onSaveReserva, reserva}) =>{
                 className="border p-3 shadow-md rounded-md"
                 onChange={handleChange}
                 value={form.cliNumber}
+                required
               />
               <input
                 type="date"
@@ -81,6 +83,7 @@ const FormReservas = ({onSaveReserva, reserva}) =>{
                 className="border p-3 shadow-md rounded-md"
                 onChange={handleChange}
                 value={form.reservaDate}
+                required
               />
               <input
                 type="time"
@@ -89,6 +92,7 @@ const FormReservas = ({onSaveReserva, reserva}) =>{
                 className="border p-3 shadow-md rounded-md"
                 onChange={handleChange}
                 value={form.reservaTime}
+                required
               />
               <input
                 type="submit"

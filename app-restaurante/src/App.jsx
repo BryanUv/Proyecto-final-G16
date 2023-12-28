@@ -9,13 +9,17 @@ import Reservas from "./pages/Reservas";
 import Platos from "./components/Carta/Platos";
 import { IoHome, IoMenu } from "react-icons/io5";
 import { MdOutlineRestaurantMenu } from "react-icons/md";
+import ProtectedRoute from "./utils/ProtectedRoute";
+import { useLocalStorage } from 'react-use';
 
 
 const App = () => {
 
+  const [user, setUser] = useLocalStorage('auth');
+
   const openMenu = () =>{
     let menu = document.getElementById('menu');
-    let textHome = document.getElementById('textHome');
+    // let textHome = document.getElementById('textHome');
 
     if(menu.classList.contains('hidden')){
       menu.classList.remove('hidden');
@@ -95,7 +99,9 @@ const App = () => {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/reservas" element={<Reservas />} />
+          <Route element={<ProtectedRoute canActivate={user}/>}>
+            <Route path="/reservas" element={<Reservas />} />
+          </Route>
 
         </Routes>
       </main>
