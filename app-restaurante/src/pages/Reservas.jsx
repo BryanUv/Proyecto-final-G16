@@ -1,5 +1,5 @@
 import { useState } from "react";
-import FormReservas from "../components/reservas/formReservas";
+import FormReservas from "../components/reservas/FormReservas";
 import ListaReserva from "../components/reservas/listaReserva";
 import { Link } from "react-router-dom";
 import { HiArrowSmLeft } from "react-icons/hi";
@@ -15,14 +15,14 @@ const Reservas = () => {
 
     if(reservaIndexFound >= 0){
 
-     const cloneReserva = [...reserva]
-     cloneReserva[reservaIndexFound] = form
-     setReserva(cloneReserva)
+      const cloneReserva = [...reserva]
+      cloneReserva[reservaIndexFound] = form
+      setReserva(cloneReserva)
     }else{
-     if(reserva.length === 0){
-       
-       setReserva([form])
-     }
+      if(reserva.length === 0){
+      
+        setReserva([form])
+      }
     }
     console.log(form)
   }
