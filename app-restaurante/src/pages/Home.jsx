@@ -8,7 +8,7 @@ const Home = () => {
 <>
 <section className="bg-[#27374D] flex gap-5 items-center justify-center p-5 flex-col z-20 pt-16" >
   <div className="text-white font-mono lg:text-8xl flex text-center absolute shadow-2xl animate-pulse uppercase">
-    Grill Haus Restaurant
+    Grill House Restaurant
   </div>
   <div className="">
     <img className="shadow-black shadow-lg lg:shadow-xl lg:shadow-black" src="https://media.istockphoto.com/id/1364372205/es/foto/chef-entregando-plato-con-comida-a-trav%C3%A9s-de-la-estaci%C3%B3n-de-pedidos-en-la-cocina-comercial.jpg?s=2048x2048&w=is&k=20&c=y7FODfJbZkZamixBxJxNxhclJoVUiFMTCK8OnG62rtw=" width="1440" alt="" />
@@ -40,7 +40,7 @@ const Home = () => {
 <section className="bg-[#27374D] flex gap-10 items-center justify-center p-10 " >
   <div className="text-center font-mono text-2xl text-white">
     <p>    
-      Explora la elegancia de Grill Haus Restaurant, donde el diseño y la delicia se fusionan. 
+      Explora la elegancia de Grill House Restaurant, donde el diseño y la delicia se fusionan. 
     </p>
     <p>
     Descubre la fusión perfecta entre estética y calidad en un ambiente encantador. 
