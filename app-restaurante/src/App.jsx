@@ -1,4 +1,5 @@
 
+
 import React from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
@@ -11,7 +12,6 @@ import { IoHome, IoMenu } from "react-icons/io5";
 import { MdOutlineRestaurantMenu } from "react-icons/md";
 import ProtectedRoute from "./utils/ProtectedRoute";
 import { useLocalStorage } from 'react-use';
-
 
 const App = () => {
 
@@ -30,6 +30,7 @@ const App = () => {
   }
 
   return (
+
     <BrowserRouter>
       <header className="bg-slate-900 py-4 px-6 text-white">
         {/* <div className="container mx-auto lg:flex justify-between items-center">
@@ -108,6 +109,5 @@ const App = () => {
     </BrowserRouter>
   );
 };
-
 
 export default App;
