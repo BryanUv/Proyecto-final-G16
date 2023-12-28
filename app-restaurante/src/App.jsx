@@ -6,7 +6,8 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Gallery from "./pages/Gallery";
 import Reservas from "./pages/Reservas";
-import { IoMenu } from "react-icons/io5";
+import { IoHome, IoMenu } from "react-icons/io5";
+import { MdOutlineRestaurantMenu } from "react-icons/md";
 
 const App = () => {
 
@@ -62,9 +63,9 @@ const App = () => {
             </div>
             <div id="menu" className="lg:flex hidden flex-grow justify-between lg:items-center absolute lg:relative lg:top-0 top-40 bg-gray-900
             left-0 w-full lg:w-auto py-14 lg:py-0 px-8 rounded-2xl">
-              <div className="flex flex-col lg:flex-row lg:gap-5 mb-8 lg:mb-0 text-center">
-                <Link to="/" className="font-bold text-white hover:font-extrabold text-3xl">Home</Link>
-                <Link to="/gallery" className="font-bold text-white hover:font-extrabold text-3xl">Carta</Link>
+              <div className="flex flex-col lg:flex-row lg:gap-5 mb-8 lg:mb-0">
+                <Link to="/" className="font-bold text-white text-3xl"><div className="flex gap-1 items-center justify-center hover:font-extrabold hover:underline mb-4"><IoHome />Home</div></Link>
+                <Link to="/gallery" className="font-bold text-white text-3xl"><div className="flex gap-1 items-center justify-center hover:font-extrabold hover:underline"><MdOutlineRestaurantMenu />Carta</div></Link>
               </div>
               <div className="flex flex-col lg:flex-row gap-4 text-center">
                 <Link to="/login">
