@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { HiArrowSmLeft } from "react-icons/hi";
 
 const FormRegister = () => {
+
   return (
     <section>
       <div className="justify-start">
