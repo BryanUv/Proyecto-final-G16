@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
 import { HiArrowSmLeft } from "react-icons/hi";
+import { useNavigate } from "react-router-dom";
+import { useState, useContext } from "react";
+
 
 const FormLogin = () => {
+  
   return (
     <section>
       <div className="justify-start">
@@ -33,6 +37,7 @@ const FormLogin = () => {
                 className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent"
                 placeholder="Ingresa tu email"
                 required
+                
               />
             </div>
             <div>
@@ -45,6 +50,7 @@ const FormLogin = () => {
                 className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent"
                 placeholder="Ingresa tu contraseña"
                 required
+               
               />
             </div>
             <div className="mt-8 flex flex-col gap-y-4">

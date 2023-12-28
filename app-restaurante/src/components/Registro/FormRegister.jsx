@@ -1,7 +1,55 @@
 import { Link } from "react-router-dom";
 import { HiArrowSmLeft } from "react-icons/hi";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const FormRegister = () => {
+  const navigate = useNavigate()
+
+  const [form, setForm] = useState({
+    fullname: '',
+    email: '',
+    password: ''
+  })
+
+  const handleChange = (event) => {
+    const { name, value } = event.target
+
+    setForm({ ...form, [name]: value })
+  }
+
+  const handleRegister = async (event) => {
+    event.preventDefault();
+    
+    // console.log('Guardando la data del usuario...')
+
+    const url = 'https://657bb008394ca9e4af149f21.mockapi.io/users'
+
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(form)
+    }
+
+    const response = await fetch(url, options)
+
+    const data = await response.json()
+
+    console.log(data)
+
+    setForm({
+      fullname: '',
+      email: '',
+      password: ''
+    })
+
+    // Redireccionar a la vista /login
+    navigate('/login')
+  }
+
+
 
   return (
     <section>
@@ -22,30 +70,21 @@ const FormRegister = () => {
         <p className="font-medium text-lg text-center text-gray-500 mt-4">
           ¡Bienvenido de nuevo! Por favor ingrese sus datos.
         </p>
-        <form>
+        <form onSubmit={handleRegister}>
           <div className="mt-8">
             <div>
-              <label htmlFor="email" className="text-lg font-medium">
-                Nombres
+              <label htmlFor="nombre" className="text-lg font-medium">
+                Nombres Completos
               </label>
               <input
                 type="text"
                 id="nombre"
+                name="fullname"
                 className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent"
                 placeholder="Ingresa tu nombre"
                 required
-              />
-            </div>
-            <div>
-              <label htmlFor="apellido" className="text-lg font-medium">
-                Apellidos
-              </label>
-              <input
-                type="texto"
-                id="apellido"
-                className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent"
-                placeholder="Ingresa tu apellido"
-                required
+                onChange={handleChange}
+                value={form.fullname}
               />
             </div>
             <div>
@@ -55,9 +94,12 @@ const FormRegister = () => {
               <input
                 type="texto"
                 id="email"
+                name="email"
                 className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent"
                 placeholder="Ingresa tu email"
                 required
+                onChange={handleChange}
+                value={form.email}
               />
             </div>
             <div>
@@ -66,10 +108,13 @@ const FormRegister = () => {
               </label>
               <input
                 type="password"
-                id="contraseña"
+                id="password"
+                name="password"
                 className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent"
                 placeholder="Ingresa tu contraseña"
                 required
+                onChange={handleChange}
+                value={form.password}
               />
             </div>
             <div className="mt-8 flex flex-col gap-y-4">
