@@ -1,5 +1,6 @@
 import FormImage from "../components/Registro/FormImage"
 import FormRegister from "../components/Registro/formRegister"
+
 const Register = () => {
   return (
 
