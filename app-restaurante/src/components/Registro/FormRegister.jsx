@@ -108,8 +108,6 @@ const FormRegister = () => {
                 placeholder="Ingresa tu email"
                 onChange={(event) => setEmail(event.target.value)}
                 required
-                onChange={handleChange}
-                value={form.email}
               />
             </div>
             <div>
@@ -124,8 +122,7 @@ const FormRegister = () => {
                 placeholder="Ingresa tu contraseña"
                 onChange={(event) => setPassword(event.target.value)}
                 required
-                onChange={handleChange}
-                value={form.password}
+                
               />
             </div>
             <div className="mt-8 flex flex-col gap-y-4">
