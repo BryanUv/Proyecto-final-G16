@@ -1,55 +1,52 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { HiArrowSmLeft } from "react-icons/hi";
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Swal from 'sweetalert2'
 
 const FormRegister = () => {
-  const navigate = useNavigate()
 
-  const [form, setForm] = useState({
-    fullname: '',
-    email: '',
-    password: ''
-  })
-
-  const handleChange = (event) => {
-    const { name, value } = event.target
-
-    setForm({ ...form, [name]: value })
-  }
-
-  const handleRegister = async (event) => {
-    event.preventDefault();
-    
-    // console.log('Guardando la data del usuario...')
-
-    const url = 'https://657bb008394ca9e4af149f21.mockapi.io/users'
-
-    const options = {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(form)
+  let navigate = useNavigate()
+  const obtenerAuth = () => {
+    var datos = localStorage.getItem('auth');
+    if(datos){
+      return JSON.parse(datos);
+    }else{
+      return [];
     }
-
-    const response = await fetch(url, options)
-
-    const data = await response.json()
-
-    console.log(data)
-
-    setForm({
-      fullname: '',
-      email: '',
-      password: ''
-    })
-
-    // Redireccionar a la vista /login
-    navigate('/login')
   }
 
+  const [auth, setAuth] = useState(obtenerAuth());
 
+  const [nombre ,setNombre] = useState('');
+  const [apellido, setApellido] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const btnGuardar = (event) => {
+    event.preventDefault();
+    var miOpjeto = { nombre, apellido, email, password }
+    setAuth([...auth, miOpjeto]);
+    limpiarFormulario();
+    Swal.fire({
+      position: "bottom-end",
+      icon: "success",
+      title: "Usuario registrado",
+      showConfirmButton: false,
+      timer: 1700
+    });
+  }
+
+  const limpiarFormulario = () => {
+    setNombre('');
+    setApellido('');
+    setEmail('');
+    setPassword('');
+    document.getElementById('frmRegistro').reset();
+  }
+
+  useEffect(() => {
+    localStorage.setItem('auth', JSON.stringify(auth));
+  },[auth])
 
   return (
     <section>
@@ -70,7 +67,7 @@ const FormRegister = () => {
         <p className="font-medium text-lg text-center text-gray-500 mt-4">
           ¡Bienvenido de nuevo! Por favor ingrese sus datos.
         </p>
-        <form onSubmit={handleRegister}>
+        <form id="frmRegistro" onSubmit={btnGuardar}>
           <div className="mt-8">
             <div>
               <label htmlFor="nombre" className="text-lg font-medium">
@@ -82,9 +79,21 @@ const FormRegister = () => {
                 name="fullname"
                 className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent"
                 placeholder="Ingresa tu nombre"
+                onChange={(event) => setNombre(event.target.value)}
                 required
-                onChange={handleChange}
-                value={form.fullname}
+              />
+            </div>
+            <div>
+              <label htmlFor="apellido" className="text-lg font-medium">
+                Apellidos
+              </label>
+              <input
+                type="texto"
+                id="apellido"
+                className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent"
+                placeholder="Ingresa tu apellido"
+                onChange={(event) => setApellido(event.target.value)}
+                required
               />
             </div>
             <div>
@@ -97,6 +106,7 @@ const FormRegister = () => {
                 name="email"
                 className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent"
                 placeholder="Ingresa tu email"
+                onChange={(event) => setEmail(event.target.value)}
                 required
                 onChange={handleChange}
                 value={form.email}
@@ -112,6 +122,7 @@ const FormRegister = () => {
                 name="password"
                 className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent"
                 placeholder="Ingresa tu contraseña"
+                onChange={(event) => setPassword(event.target.value)}
                 required
                 onChange={handleChange}
                 value={form.password}

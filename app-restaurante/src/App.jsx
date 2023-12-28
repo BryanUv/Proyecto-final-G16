@@ -1,5 +1,5 @@
-import { useContext } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+
+
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
@@ -10,15 +10,16 @@ import Reservas from "./pages/Reservas";
 import Platos from "./components/Carta/Platos";
 import { IoHome, IoMenu } from "react-icons/io5";
 import { MdOutlineRestaurantMenu } from "react-icons/md";
-
+import ProtectedRoute from "./utils/ProtectedRoute";
+import { useLocalStorage } from 'react-use';
 
 const App = () => {
 
-  
+  const [user, setUser] = useLocalStorage('auth');
 
   const openMenu = () =>{
     let menu = document.getElementById('menu');
-    let textHome = document.getElementById('textHome');
+    // let textHome = document.getElementById('textHome');
 
     if(menu.classList.contains('hidden')){
       menu.classList.remove('hidden');
@@ -29,6 +30,7 @@ const App = () => {
   }
 
   return (
+
     <BrowserRouter>
       <header className="bg-slate-900 py-4 px-6 text-white">
         
@@ -76,13 +78,14 @@ const App = () => {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/reservas" element={<Reservas />} />
+          <Route element={<ProtectedRoute canActivate={user}/>}>
+            <Route path="/reservas" element={<Reservas />} />
+          </Route>
 
         </Routes>
       </main>
     </BrowserRouter>
   );
 };
-
 
 export default App;
