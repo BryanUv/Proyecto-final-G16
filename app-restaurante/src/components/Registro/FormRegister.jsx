@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { HiArrowSmLeft } from "react-icons/hi";
 import { useState, useEffect } from "react";
+import Swal from 'sweetalert2'
 
 const FormRegister = () => {
 
@@ -26,6 +27,13 @@ const FormRegister = () => {
     var miOpjeto = { nombre, apellido, email, password }
     setAuth([...auth, miOpjeto]);
     limpiarFormulario();
+    Swal.fire({
+      position: "bottom-end",
+      icon: "success",
+      title: "Usuario registrado",
+      showConfirmButton: false,
+      timer: 1700
+    });
   }
 
   const limpiarFormulario = () => {
