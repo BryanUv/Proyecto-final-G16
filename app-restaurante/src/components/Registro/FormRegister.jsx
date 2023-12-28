@@ -1,7 +1,52 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { HiArrowSmLeft } from "react-icons/hi";
+import { useState, useEffect } from "react";
+import Swal from 'sweetalert2'
 
 const FormRegister = () => {
+
+  let navigate = useNavigate()
+  const obtenerAuth = () => {
+    var datos = localStorage.getItem('auth');
+    if(datos){
+      return JSON.parse(datos);
+    }else{
+      return [];
+    }
+  }
+
+  const [auth, setAuth] = useState(obtenerAuth());
+
+  const [nombre ,setNombre] = useState('');
+  const [apellido, setApellido] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const btnGuardar = (event) => {
+    event.preventDefault();
+    var miOpjeto = { nombre, apellido, email, password }
+    setAuth([...auth, miOpjeto]);
+    limpiarFormulario();
+    Swal.fire({
+      position: "bottom-end",
+      icon: "success",
+      title: "Usuario registrado",
+      showConfirmButton: false,
+      timer: 1700
+    });
+  }
+
+  const limpiarFormulario = () => {
+    setNombre('');
+    setApellido('');
+    setEmail('');
+    setPassword('');
+    document.getElementById('frmRegistro').reset();
+  }
+
+  useEffect(() => {
+    localStorage.setItem('auth', JSON.stringify(auth));
+  },[auth])
 
   return (
     <section>
@@ -22,7 +67,7 @@ const FormRegister = () => {
         <p className="font-medium text-lg text-center text-gray-500 mt-4">
           ¡Bienvenido de nuevo! Por favor ingrese sus datos.
         </p>
-        <form>
+        <form id="frmRegistro" onSubmit={btnGuardar}>
           <div className="mt-8">
             <div>
               <label htmlFor="email" className="text-lg font-medium">
@@ -33,6 +78,7 @@ const FormRegister = () => {
                 id="nombre"
                 className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent"
                 placeholder="Ingresa tu nombre"
+                onChange={(event) => setNombre(event.target.value)}
                 required
               />
             </div>
@@ -45,6 +91,7 @@ const FormRegister = () => {
                 id="apellido"
                 className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent"
                 placeholder="Ingresa tu apellido"
+                onChange={(event) => setApellido(event.target.value)}
                 required
               />
             </div>
@@ -57,6 +104,7 @@ const FormRegister = () => {
                 id="email"
                 className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent"
                 placeholder="Ingresa tu email"
+                onChange={(event) => setEmail(event.target.value)}
                 required
               />
             </div>
@@ -69,6 +117,7 @@ const FormRegister = () => {
                 id="contraseña"
                 className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent"
                 placeholder="Ingresa tu contraseña"
+                onChange={(event) => setPassword(event.target.value)}
                 required
               />
             </div>

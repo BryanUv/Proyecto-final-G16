@@ -47,8 +47,8 @@ const Reservas = () => {
 
     
     //preguntar a profesor sobre generar reservas con respecto al fondo 
-    <section className="flex flex-col lg:flex-row justify-around w-full h-screen bg-[url('/img/chef1.jpg')] bg-no-repeat bg-cover">
-      <div className="justify-start pt-10">
+    <section className="flex justify-around w-full h-screen bg-[url('/img/chef1.jpg')] bg-no-repeat bg-cover">
+      <div className="justify-start">
         <Link to="/">
           <div className="flex items-center gap-3 py-3">
             <HiArrowSmLeft color="white" size={50} />
