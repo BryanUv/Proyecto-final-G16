@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { HiArrowSmLeft } from "react-icons/hi";
 import { Link } from "react-router-dom";
 
-const FormReservas = ({onSaveReserva}) =>{
+const FormReservas = ({onSaveReserva, reserva}) =>{
     const INITAL_FORM_STATE = {
       id: '',
       cliName:'',
@@ -13,13 +13,14 @@ const FormReservas = ({onSaveReserva}) =>{
   
       const [form, setForm] = useState(INITAL_FORM_STATE)
   
-      // useEffect(() => {
-      //   const hayReserva = Object.keys(reserva).length > 0
-      //   if(hayReserva){
-      //     setForm(reserva)
-      //   }
-      // },[reserva])
-  
+      useEffect(() => {
+        const hayReserva = Object.keys(reserva).length > 0
+        console.log(reserva)
+        if(hayReserva){
+          setForm(reserva)
+        }
+      },[reserva])
+
       const handleChange = (event) => {
         const name = event.target.name
         const value = event.target.value
@@ -29,28 +30,24 @@ const FormReservas = ({onSaveReserva}) =>{
   
       const handleSaveReserva = (event) => {
         event.preventDefault();
-  
-        const newReserva = {
-          ...form,
-          id: crypto.randomUUID()
+        if(!form.id){
+          //aqui se genera una nueva reserva
+          const newReserva = {
+            ...form,
+            id: crypto.randomUUID()        
+          }  
+          console.log('Guardando reserva...', newReserva)
+          onSaveReserva(newReserva)          
+        }else{
+          //cuando se edita la reserva
+          onSaveReserva(form)
+          
         }
-  
-        console.log('Guardando reserva...', newReserva)
-  
-        onSaveReserva(newReserva)
-  
         setForm(INITAL_FORM_STATE)
       }
       return (
         <section className="p-10">
-          {/* <div className="absolute top-100 left-52">
-            <Link to="/">
-              <div className="flex items-center gap-3 py-3">
-                <HiArrowSmLeft color="white" size={50} />
-                <p className="text-white text-3xl">Ir Home</p>
-              </div>
-            </Link>
-          </div> */}
+         
           <div className=" w-96 p-4 border border-transparent rounded-lg bg-white/20 backdrop-blur-sm absolute bottom-[10%] left-[10%]">
             <h2 className="text-2xl text-center mb-4 text-white font-bold">Reservas</h2>
     
@@ -97,6 +94,7 @@ const FormReservas = ({onSaveReserva}) =>{
                 type="submit"
                 className="border p-2 bg-slate-400 text-white rounded-md cursor-pointer border-transparent hover:bg-slate-900"
                 value="Guardar"
+                
               />
             </form>
           </div>

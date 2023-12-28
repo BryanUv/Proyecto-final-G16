@@ -1,4 +1,4 @@
-const ListaReserva = ({ reserva }) => {
+const ListaReserva = ({ reserva,eliminar, editar }) => {
   
   if (reserva.length === 0) {
     return (
@@ -43,13 +43,13 @@ const ListaReserva = ({ reserva }) => {
 
                   <button
                     className="p-2 bg-slate-400 text-white rounded-lg cursor-pointer hover:bg-blue-900"
-                    // onClick={() => onEdit(appointment)}
+                    onClick={() => editar(reserva)}
                   >
                     Editar
                   </button>
                   <button
                     className="p-2 bg-slate-500 text-white rounded-lg cursor-pointer hover:bg-red-700"
-                    // onClick={() => onRemove(appointment.id)}
+                    onClick={() => eliminar(reserva.id)}
                   >
                     Eliminar
                   </button>
