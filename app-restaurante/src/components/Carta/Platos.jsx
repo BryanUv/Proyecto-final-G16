@@ -25,15 +25,15 @@ const Platos = () => {
       <section className='bg-[#27374D]'>
         
           
-          <h1 className='text-5xl text-white text-center pt-10 pb-10'>{platos?.strMeal}</h1>      
+          <h1 className='text-5xl text-white text-center py-10 px-10'>{platos?.strMeal}</h1>      
 
         
-          <div className='flex justify-center flex-col items-center mt-6 text-center gap-4 '>
+          <div className='flex justify-center flex-col items-center mt-6 text-center gap-4 px-10'>
             <img className='rounded-xl shadow-black shadow-lg' src={platos?.strMealThumb } alt={platos?.strMeal} />
 
             <div className='bg-white flex flex-col py-4 px-8 rounded-lg gap-2 mt-5 shadow-black shadow-md'>
-              <strong className='text-4xl'>Categoría: {platos?.strCategory}</strong>
-              <strong className='text-4xl'>País de origen: {platos?.strArea}</strong>
+              <strong className='text-2xl lg:text-4xl'>Categoría: {platos?.strCategory}</strong>
+              <strong className='text-2xl lg:text-4xl'>País de origen: {platos?.strArea}</strong>
             </div>
             
 

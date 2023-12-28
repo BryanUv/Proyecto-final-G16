@@ -31,10 +31,10 @@ const Home = () => {
 </section>
 <section className="bg-[#27374D] flex gap-10 items-center justify-center p-10 "> 
 <div>
-  <img className="shadow-black shadow-lg lg:shadow-xl lg:shadow-black" src="https://t3.ftcdn.net/jpg/04/38/64/76/360_F_438647662_2tWr9OdsFNQi3KJVRM9HsyWkyuwHdZdV.jpg" width="700" alt="" />
+  <img className="shadow-black shadow-lg lg:shadow-xl lg:shadow-black hover:scale-105 duration-500" src="https://t3.ftcdn.net/jpg/04/38/64/76/360_F_438647662_2tWr9OdsFNQi3KJVRM9HsyWkyuwHdZdV.jpg" width="700" alt="" />
 </div>
 <div>
-  <img className="shadow-black shadow-lg lg:shadow-xl lg:shadow-black" src="https://www.shutterstock.com/image-photo/lomo-saltado-peruvian-tradition-gourmet-600nw-2193747871.jpg" width="700" alt="" />
+  <img className="shadow-black shadow-lg lg:shadow-xl lg:shadow-black hover:scale-105 duration-500" src="https://www.shutterstock.com/image-photo/lomo-saltado-peruvian-tradition-gourmet-600nw-2193747871.jpg" width="700" alt="" />
 </div>
 </section>
 <section className="bg-[#27374D] flex gap-10 items-center justify-center p-10 " >
@@ -49,7 +49,7 @@ const Home = () => {
     ¡Te damos la bienvenida a un rincón culinario donde la belleza se mezcla con el placer!
     </p>
     <div className="flex items-center justify-center p-10">
-    <img className="shadow-black shadow-lg lg:shadow-xl lg:shadow-black" src="https://images.pexels.com/photos/1237073/pexels-photo-1237073.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"  alt="" />
+    <img className="shadow-black shadow-lg lg:shadow-xl lg:shadow-black hover:scale-105 duration-500" src="https://images.pexels.com/photos/1237073/pexels-photo-1237073.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"  alt="" />
     </div>
   </div>
 </section>

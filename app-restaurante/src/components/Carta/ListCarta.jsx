@@ -20,7 +20,7 @@ const ListCarta = () => {
 
   return (
     <>
-      <section className="grid lg:grid-cols-5 grid-cols-1 gap-6 gap-y-20 mt-20 mx-20">
+      <section className="grid lg:grid-cols-5 grid-cols-1 gap-12 gap-y-20 mt-20 mx-20 pb-20">
         
         {platos.map(plato => {
           // key= {plato.idMeal}
