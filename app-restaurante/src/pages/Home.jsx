@@ -6,19 +6,6 @@ const Home = () => {
   return (
 
 <>
-<<<<<<< HEAD
-<section className="bg-[#27374D] flex gap-5 items-center justify-center p-5 flex-col" >
-  <div className=" text-white font-mono text-8xl flex text-center absolute shadow-2xl animate-pulse uppercase ">
-    Grill Haus Restaurant
-  </div>
-  <div className="">
-    <img className="" src="https://media.istockphoto.com/id/1364372205/es/foto/chef-entregando-plato-con-comida-a-trav%C3%A9s-de-la-estaci%C3%B3n-de-pedidos-en-la-cocina-comercial.jpg?s=2048x2048&w=is&k=20&c=y7FODfJbZkZamixBxJxNxhclJoVUiFMTCK8OnG62rtw=" width="1440" alt="" />
-  </div>
-  
-</section>
-<section className="bg-[#27374D] flex gap-10 items-center justify-center p-12">  
-  <div className=" text-center font-mono text-2xl text-white " > 
-=======
 <section className="bg-[#27374D] flex gap-5 items-center justify-center p-5 flex-col z-20 pt-16" >
   <div className="text-white font-mono lg:text-8xl flex text-center absolute shadow-2xl animate-pulse uppercase">
     Grill Haus Restaurant
@@ -31,7 +18,6 @@ const Home = () => {
 <section className="bg-[#27374D] flex gap-10 items-center justify-center p-12"> 
  
   <div className=" text-center font-mono text-2xl text-white"> 
->>>>>>> ae10fed3df821901f4edd4151ff29dc6ee992cc2
         <p>
         Nuestro Compromiso
         </p>        
@@ -44,13 +30,8 @@ const Home = () => {
   </div>
 </section>
 <section className="bg-[#27374D] flex gap-10 items-center justify-center p-10 "> 
-<<<<<<< HEAD
-<div > 
-  <img src="https://t3.ftcdn.net/jpg/04/38/64/76/360_F_438647662_2tWr9OdsFNQi3KJVRM9HsyWkyuwHdZdV.jpg" width="700" alt="" />
-=======
 <div>
   <img className="shadow-black shadow-lg lg:shadow-xl lg:shadow-black hover:scale-105 duration-500" src="https://t3.ftcdn.net/jpg/04/38/64/76/360_F_438647662_2tWr9OdsFNQi3KJVRM9HsyWkyuwHdZdV.jpg" width="700" alt="" />
->>>>>>> ae10fed3df821901f4edd4151ff29dc6ee992cc2
 </div>
 <div>
   <img className="shadow-black shadow-lg lg:shadow-xl lg:shadow-black hover:scale-105 duration-500" src="https://www.shutterstock.com/image-photo/lomo-saltado-peruvian-tradition-gourmet-600nw-2193747871.jpg" width="700" alt="" />
